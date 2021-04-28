@@ -38,6 +38,24 @@ public class Client implements CommandLineRunner {
         loadDestinations();
         loadBaggages();
         loadCoupons();
+
+        System.out.println("Example of task 'a':");
+        Ticket ticket = ticketServiceMap.findById(1L);
+        System.out.println("Ticket: " + ticket);
+        System.out.println("Checking ticket for a booking. \nBooked: " + ticketServiceMap.checkIfBooked(ticket.getId()));
+
+        System.out.println("Example of task 'b':");
+        Baggage baggage = baggageServiceMap.findById(1L);
+        Destination destination = destinationServiceMap.findById(1L);
+        System.out.println("Baggage(id: " + baggage.getId() + "): " + baggage + ".\nDestination(id: " + destination.getId() + "): " + destination);
+        System.out.println("Check-in for a baggage: " + baggageServiceMap.checkIn(baggage.getId(), destination.getId()));
+
+        System.out.println("Example if task 'c': ");
+        Coupon coupon = couponServiceMap.findById(1L);
+        System.out.println("Coupon: " + coupon);
+        System.out.println("Discounted price: " + couponServiceMap.getNewPrice(coupon.getId(), 500.00));
+
+
     }
 
     private void loadTickets() {

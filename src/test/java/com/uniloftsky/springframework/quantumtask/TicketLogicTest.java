@@ -5,7 +5,7 @@ import com.uniloftsky.springframework.quantumtask.services.map.TicketServiceMap;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class TicketLogicTest {
 
@@ -17,7 +17,7 @@ public class TicketLogicTest {
     @BeforeEach
     void setUp() {
         ticketServiceMap = new TicketServiceMap();
-        ticketServiceMap.save(Ticket.builder().id(1L).price(200.00).booked(true).build());
+        ticketServiceMap.save(Ticket.builder().id(ticketId).price(ticketPrice).booked(ticketBooked).build());
     }
 
     @Test
