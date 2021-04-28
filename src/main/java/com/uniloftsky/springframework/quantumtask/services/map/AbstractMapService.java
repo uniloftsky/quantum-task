@@ -23,6 +23,7 @@ public abstract class AbstractMapService<T extends BaseEntity, ID extends Long> 
             cache.put(id, foundObject);
             return foundObject;
         }
+        log.info("Got object from the cache!");
         return cache.get(id);
     }
 
