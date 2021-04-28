@@ -1,6 +1,9 @@
 package com.uniloftsky.springframework.quantumtask.model;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Getter
 @Setter
@@ -9,9 +12,5 @@ import lombok.*;
 public abstract class BaseEntity {
 
     private Long id;
-
-    private Boolean isNew() {
-        return this.id == null;
-    }
 
 }
