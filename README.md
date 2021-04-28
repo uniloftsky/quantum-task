@@ -11,3 +11,5 @@ cd quantum-task
 ./mvnw package
 java -jar target/*.jar
 ```
+
+Task description: [Task Description](https://github.com/uniloftsky/quantum-task/blob/master/task.pdf)
